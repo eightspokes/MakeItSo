@@ -14,6 +14,8 @@
 		301CD9E52A6DA9B500A07758 /* MakeItSoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CD9E42A6DA9B500A07758 /* MakeItSoTests.swift */; };
 		301CD9EF2A6DA9B500A07758 /* MakeItSoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CD9EE2A6DA9B500A07758 /* MakeItSoUITests.swift */; };
 		301CD9F12A6DA9B500A07758 /* MakeItSoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CD9F02A6DA9B500A07758 /* MakeItSoUITestsLaunchTests.swift */; };
+		301CD9FE2A6DAA7C00A07758 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CD9FD2A6DAA7C00A07758 /* Reminder.swift */; };
+		301CDA002A6DCBBC00A07758 /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CD9FF2A6DCBBC00A07758 /* AddReminderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		301CD9EA2A6DA9B500A07758 /* MakeItSoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeItSoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		301CD9EE2A6DA9B500A07758 /* MakeItSoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeItSoUITests.swift; sourceTree = "<group>"; };
 		301CD9F02A6DA9B500A07758 /* MakeItSoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeItSoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		301CD9FD2A6DAA7C00A07758 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		301CD9FF2A6DCBBC00A07758 /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				301CD9D32A6DA9B200A07758 /* MakeItSoApp.swift */,
+				301CD9FD2A6DAA7C00A07758 /* Reminder.swift */,
 				301CD9D52A6DA9B200A07758 /* ContentView.swift */,
+				301CD9FF2A6DCBBC00A07758 /* AddReminderView.swift */,
 				301CD9D72A6DA9B400A07758 /* Assets.xcassets */,
 				301CD9D92A6DA9B400A07758 /* Preview Content */,
 			);
@@ -257,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301CD9FE2A6DAA7C00A07758 /* Reminder.swift in Sources */,
 				301CD9D62A6DA9B200A07758 /* ContentView.swift in Sources */,
+				301CDA002A6DCBBC00A07758 /* AddReminderView.swift in Sources */,
 				301CD9D42A6DA9B200A07758 /* MakeItSoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

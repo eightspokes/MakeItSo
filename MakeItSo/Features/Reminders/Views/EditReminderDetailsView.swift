@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddReminderView: View {
+struct EditReminderDetailsView: View {
     
     enum FocusableField: Hashable {
       case title
@@ -16,8 +16,17 @@ struct AddReminderView: View {
 
     @FocusState
     private var focusedField: FocusableField?
-
-    @State private var reminder = Reminder(title: "")
+    
+    enum Mode {
+        case add
+        case edit
+    }
+    var mode: Mode = .add
+    
+    @State var reminder = Reminder(title: "")
+    
+    
+    
     @Environment(\.dismiss)
     private var dismiss
     // Completion handler
@@ -34,8 +43,13 @@ struct AddReminderView: View {
             Form {
                 TextField("New Reminder", text: $reminder.title)
                     .focused($focusedField, equals: .title)
+                    .onSubmit {
+                        commit()
+                    }
                     
             }
+            .navigationTitle(mode == .add ? "New Reminder" : "Details")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction){
                     Button{
@@ -61,10 +75,20 @@ struct AddReminderView: View {
 }
 
 struct AddReminderView_Previews: PreviewProvider {
+    struct Container: View {
+       @State var reminder = Reminder.samples[0]
+       var body: some View {
+         EditReminderDetailsView(mode: .edit, reminder: reminder) { reminder in
+           print("You edited a reminder: \(reminder.title)")
+         }
+       }
+     }
+    
+    
     static var previews: some View {
-        AddReminderView{
-            reminder in
-            print("Reminder \(reminder.title) added")
-        }
+        EditReminderDetailsView { reminder in
+              print("You added a reminder: \(reminder.title)")
+            }
+        Container()
     }
 }
